@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm6o2iyp8awcm"]
+
+[ext_resource type="Texture2D" uid="uid://d0hs55yc32xl1" path="res://assets/img/Obstacles/Meteor.png" id="1_pkplu"]
+
+[node name="Meteor" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(424, 488)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_pkplu")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(424, 488)
+scale = Vector2(0.7, 0.7)
+polygon = PackedVector2Array(-362.5, -514.2, -362.5, -512.7, -379.9, -509, -383, -509, -402, -498, -404.3, -498, -420.3, -482, -421.7, -482, -432.7, -461, -434, -461, -438, -446, -439.8, -446, -435.5, -415.7, -435.5, -409.4, -425.5, -393.4, -425.5, -391.2, -411.5, -375.3, -411.5, -373.8, -384.5, -359.8, -384.5, -358.2, -367.5, -356.3, -367.5, -355, -332.2, -355, -308.2, -362, -303.8, -362, -279.8, -381, -278.1, -381, -276.5, -385.7, -276.5, -391.5, -270.3, -403, -269, -403, -265, -417, -263.5, -417, -263.5, -424, -262.4, -424, -263.5, -443.1, -263.5, -449.4, -268.5, -461.4, -268.5, -464.6, -278.5, -478.7, -278.5, -480.9, -291.5, -493, -291.5, -494.2, -311.5, -505.3, -311.5, -506.5, -322.5, -509.5, -322.5, -510.8)

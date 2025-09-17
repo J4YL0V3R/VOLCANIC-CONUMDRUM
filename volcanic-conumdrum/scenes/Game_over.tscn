@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://67giqosx2g4h"]
+
+[ext_resource type="FontFile" uid="uid://8dfde0qdrovb" path="res://assets/fonts/SpicyRice-Regular.ttf" id="1_1fmsk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pmslm"]
+bg_color = Color(0.945098, 0.501961, 0.211765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nt7s8"]
+bg_color = Color(0.869644, 0.614571, 0.224357, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wg8tr"]
+bg_color = Color(0.945098, 0.501961, 0.501961, 1)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -199.0
+offset_top = -21.0
+offset_right = 5.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0.992157, 0.94902, 0.890196, 1)
+theme_override_fonts/font = ExtResource("1_1fmsk")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/hover = SubResource("StyleBoxFlat_pmslm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nt7s8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wg8tr")
+text = "RESTART"

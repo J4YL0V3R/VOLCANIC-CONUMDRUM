@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1l5fye3ectlf"]
+
+[ext_resource type="Texture2D" uid="uid://cwgxt6seixtc8" path="res://assets/img/background/GRASS.png" id="1_pybca"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mi8v4"]
+size = Vector2(2241.5, 150)
+
+[node name="Ground" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 7)
+scale = Vector2(5.82292, 1.66406)
+texture = ExtResource("1_pybca")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(1115.25, 574)
+shape = SubResource("RectangleShape2D_mi8v4")

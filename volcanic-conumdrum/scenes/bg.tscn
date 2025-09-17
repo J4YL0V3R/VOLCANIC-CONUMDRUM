@@ -1,0 +1,75 @@
+[gd_scene load_steps=10 format=3 uid="uid://6d637o23cs61"]
+
+[ext_resource type="Texture2D" uid="uid://ctg4h735d7tn0" path="res://assets/img/background/New Piskel (5).png" id="1_w68nc"]
+[ext_resource type="Script" uid="uid://mnvd2i2tphef" path="res://scenes/Volcano.gd" id="2_w68nc"]
+[ext_resource type="Texture2D" uid="uid://54fsb3xbbjir" path="res://assets/img/background/New Piskel (1).png" id="3_r6ch1"]
+[ext_resource type="Texture2D" uid="uid://cuiirfl1dgfln" path="res://assets/img/background/BACK MOUNTAIN (1).png" id="4_w68nc"]
+[ext_resource type="Texture2D" uid="uid://bvv1gxqmwlsfd" path="res://assets/img/background/FRONT MOUNTAIN (1).png" id="5_bf1jy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w68nc"]
+atlas = ExtResource("3_r6ch1")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bf1jy"]
+atlas = ExtResource("3_r6ch1")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r6ch1"]
+atlas = ExtResource("3_r6ch1")
+region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4la4c"]
+animations = [{
+"frames": [{
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_w68nc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bf1jy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r6ch1")
+}],
+"loop": true,
+"name": &"volcano",
+"speed": 2.0
+}]
+
+[node name="Bg" type="ParallaxBackground"]
+
+[node name="sky" type="Sprite2D" parent="."]
+scale = Vector2(2.9974, 1.6901)
+texture = ExtResource("1_w68nc")
+centered = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.01, 1)
+script = ExtResource("2_w68nc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxLayer"]
+texture_filter = 1
+position = Vector2(740, 274)
+scale = Vector2(12.525, 11.6738)
+sprite_frames = SubResource("SpriteFrames_4la4c")
+animation = &"volcano"
+frame_progress = 0.207212
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(1149, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(2, -116)
+scale = Vector2(3, 1.98438)
+texture = ExtResource("4_w68nc")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(1149, 0)
+
+[node name="foreground" type="Sprite2D" parent="ParallaxLayer4"]
+position = Vector2(2, -2)
+scale = Vector2(2.9974, 1.69271)
+texture = ExtResource("5_bf1jy")
+centered = false
